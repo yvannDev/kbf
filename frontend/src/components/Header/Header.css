@@ -1,0 +1,134 @@
+/* ===================== HEADER ===================== */
+
+header {
+  height: 12vh;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-white);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===================== NAV BAR ===================== */
+
+header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-md);
+  height: 100%;
+}
+
+/* ===================== LOGO ===================== */
+
+header .nav-bar .nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--bg-white);
+  background: var(--primary-blue);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  padding: 8px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* ===================== MENU DESKTOP ===================== */
+
+header .nav-bar .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-bar .nav-item {
+  list-style-type: none;
+  margin: var(--spacing-xs);
+}
+
+header .nav-bar .nav-item .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: var(--spacing-xs);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+header .nav-bar .nav-item .nav-links:hover {
+  color: var(--primary-blue);
+}
+
+/* ===================== BOUTON HAMBURGER ===================== */
+
+header .btn-mobile {
+  display: none;           /* caché sur desktop */
+  border: none;
+  background: none;
+  font-size: var(--spacing-md);
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+  z-index: 1100;
+}
+
+header .btn-mobile:hover {
+  color: var(--primary-blue);
+}
+
+/* ===================== MENU MOBILE ===================== */
+
+header .mobileMenu {
+  position: fixed;
+  top: 12vh;     
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  max-height: calc(100vh - 12vh);
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.mobileNav .nav-menuMobile {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-xs);
+  gap: var(--spacing-sm);
+  list-style: none;
+  margin: 0;
+}
+
+.mobileNav .nav-menuMobile .nav-item .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: var(--spacing-sm);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: var(--radius-xy);
+  transition: var(--transition-fast);
+}
+
+
+/* ===================== RESPONSIVE 768px ===================== */
+
+@media (max-width: 768px) {
+
+  /* On cache UNIQUEMENT le menu desktop, pas toute la nav-bar */
+  header .nav-bar .nav-menu {
+    display: none;
+  }
+
+  /* On affiche le bouton hamburger */
+  header .btn-mobile {
+    display: block;
+  }
+}
