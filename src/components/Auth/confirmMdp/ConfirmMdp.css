@@ -1,0 +1,380 @@
+/* ─── Wrapper global ─────────────────────────────── */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.register-wrapper {
+  display: flex;
+  width: 960px;
+  min-height: 620px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+/* ─── Panneau gauche ───────────────────────────────    */
+.register-side {
+  width: 340px;
+  flex-shrink: 0;
+  background: var(--primary-blue);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-side::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--bg-white) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.register-side::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+ background: radial-gradient(circle, var(--bg-white) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.side-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.kbf-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--primary-blue);
+  background: var(--bg-white);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  padding: 8px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.side-title {
+  font-weight: 800;
+  font-size: var( --spacing-sm);
+  line-height: 1.1;
+  color: var(--bg-white);
+  margin: 0;
+}
+
+.side-sub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.side-circles {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.circle {
+  border-radius: 50%;
+  display: block;
+}
+.c1 { width: 10px; height: 10px; background: var( --bg-white); }
+.c2 { width: 10px; height: 10px; background: var(--success-green) }
+.c3 { width: 10px; height: 10px; background: rgba(201,169,110,0.15); }
+
+/* ─── Panneau droit formulaire ───────────────────── */
+.register-form {
+  flex: 1;
+  background: var(--bg-white);
+  padding: var(--spacing-md)  var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.form-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #999;
+  margin: 0 0 36px;
+}
+
+/* ─── Form group ─────────────────────────────────── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ─── Nom + Prénom côte à côte ───────────────────── */
+.form-inline {
+  display: flex;
+  gap: 20px;
+}
+
+.form-inline .form-row {
+  flex: 1;
+}
+
+/* ─── form-row avec label flottant ───────────────── */
+.form-row {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+/* Input de base */
+.form-row .ee {
+  width: 100%;
+  padding: 18px 14px 6px 14px;
+  border: none;
+  border-bottom: 1.5px solid #ddd;
+  border-radius: 0;
+  background: transparent;
+  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  color: #0a0a0a;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease;
+}
+
+.form-row .ee:hover {
+  border-bottom-color: var(--text-secondary);
+}
+
+.form-row .ee:focus {
+  border-bottom-color: var(--text-secondary);
+}
+
+/* ─── Label flottant ─────────────────────────────── */
+.form-row label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var( --text-secondary);
+  pointer-events: none;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Label monte quand input est focus ou rempli (placeholder=" " trick) */
+.form-row .ee:focus ~ label,
+.form-row .ee:not(:placeholder-shown) ~ label {
+  top: 6px;
+  transform: translateY(0);
+  font-size: 11px;
+  color: var(--primary-blue);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ─── Barre d'animation sous l'input ────────────── */
+.input-bar {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: width 0.3s ease;
+}
+
+.form-row .ee:focus ~ label ~ .input-bar,
+.form-row .ee:focus ~ .err-input ~ .input-bar {
+  width: 100%;
+}
+
+/* Astuce : on refait l'ordre pour cibler .input-bar après .ee:focus */
+.form-row:focus-within .input-bar {
+  width: 100%;
+}
+
+/* ─── Message d'erreur ───────────────────────────── */
+.err-input {
+  display: block;
+  font-size: 11px;
+  color: #e05252;
+  min-height: 16px;
+  margin-top: 4px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ─── Checkbox ───────────────────────────────────── */
+.form-row--checkbox {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.form-row--checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-blue);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form-row--checkbox label {
+  position: static;
+  transform: none;
+  font-size: 13px;
+  color: #666;
+  pointer-events: auto;
+  top: auto;
+}
+
+.form-row--checkbox label a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-row--checkbox label a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Bouton submit ──────────────────────────────── */
+.btn-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 24px;
+  background: var(--text-primary);
+  color: var(--bg-white);
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+  margin-top: 4px;
+}
+
+.btn-submit svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.25s ease;
+}
+
+.btn-submit:hover {
+  background: var(--primary-blue);
+  transform: translateY(-1px);
+}
+
+.btn-submit:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.loading-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ─── Lien login ─────────────────────────────────── */
+.login-link {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.login-link a {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  color: var(--primary-blue);
+}
+
+/* ─── Responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .register-wrapper {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .register-side {
+    width: 100%;
+    padding: 36px 28px;
+    min-height: 200px;
+  }
+
+  .side-title {
+    font-size: 30px;
+  }
+
+  .register-form {
+    padding: 36px 24px;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    gap: 0;
+  }
+}
