@@ -1,0 +1,699 @@
+.parainage {
+  background-color: var(--text-muted);
+}
+
+.parainage .title-par {
+  max-width: 800px;
+  font-size: var(--spacing-md);
+  margin-left: var(--spacing-xl);
+  text-transform: capitalize;
+  color: var(--bg-white);
+}
+
+.parainage .blogs {
+  max-width: 1280px;
+  margin-right: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+  display: grid;
+  grid-template-columns: 1fr 1fr 300px;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+/* __________________blog pour parainage_________ */
+.parainage .blog1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  box-shadow: var(--shadow-xl);
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  min-height: 390px;
+  min-width: 500px;
+}
+
+.parainage .blog1 .share {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.parainage .blog1 :is(.titleLink, .subtitle) {
+  margin-left: var(--spacing-sm);
+  font-size: var(--spacing-sm);
+  text-transform: capitalize;
+  max-width: 800px;
+}
+
+.parainage .blog1 .inputAnetwork {
+  display: flex;
+  flex-direction: column;
+  margin: var(--spacing-sm);
+}
+
+.parainage .blog1 .inputAnetwork .inputReadonly {
+  background-color: var(--text-gray);
+  max-width: 400px;
+  min-height: 30px;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-sm);
+}
+.parainage .blog1 .inputAnetwork .inputReadonly input {
+  background-color: var(--text-gray);
+  border: 0;
+  font-size: 15px;
+}
+.parainage .blog1 .inputAnetwork .inputReadonly button {
+  margin-left: var(--spacing-md);
+  border: 0;
+  font-size: var(--spacing-sm);
+  padding: var(--spacing-xs);
+  background-color: var(--primary-blue);
+  border-radius: var(--radius-xs);
+  color: var(--bg-white);
+  cursor: pointer;
+}
+
+.parainage .blog1 .share .sharnet .titleIn {
+  max-width: 800px;
+}
+.parainage .blog1 .share .sharnet .titleIn small {
+  font-style: italic;
+  font-weight: 200;
+  font-size: var(--spacing-sm);
+}
+.parainage .blog1 .share .sharnet .socialShare {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--spacing-md);
+  max-width: 800px;
+  margin-top: var(--spacing-xl);
+}
+
+.parainage .blog1 .share .sharnet .socialShare .whatsapp {
+  color: var(--bg-white);
+  background-color: var(--success-green);
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+}
+.parainage .blog1 .share .sharnet .socialShare .facebook {
+  color: var(--bg-white);
+  background-color: var(--primary-blue);
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+}
+.parainage .blog1 .share .sharnet .socialShare .gmail {
+  color: var(--bg-white);
+  background-color: var(--text-red);
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+}
+.parainage .blog1 .share .sharnet .socialShare .sms {
+  color: var(--bg-white);
+  background-color: var(--text-light);
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+}
+
+.parainage .blog1 .share .sharQR {
+  margin-top: var(--spacing-sm);
+}
+.parainage .blog1 .share .sharQR .qrCode-title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--spacing-md);
+}
+/* reserver pour qr code */
+.parainage .blog1 .share .sharQR .downloadQr .qr-btn {
+  margin-left: var(--spacing-xs);
+  border: 0;
+  border-radius: var(--radius-xs);
+  background-color: var(--primary-blue);
+  text-transform: capitalize;
+  color: var(--bg-white);
+  width: 135px;
+  height: 30px;
+  margin-top: 1.1rem;
+  cursor: pointer;
+}
+
+/* ________mon tracker de performance__________ */
+
+.parainage .blog2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  border-radius: var(--radius-xs);
+  min-height: 300px;
+  box-shadow: var(--shadow-xl);
+  background-color: var(--bg-white);
+  border-radius: 8px;
+}
+.parainage .blog2 .title-tracker {
+  margin-left: var(--spacing-sm);
+  text-transform: capitalize;
+  font-size: var(--spacing-sm);
+}
+.parainage .blog2 .trackers {
+  display: flex;
+  justify-content: space-between;
+  margin-left: var(--spacing-sm);
+}
+.parainage .blog2 .trackers .tacker-num-points {
+  display: flex;
+  flex-direction: column;
+}
+.parainage .blog2 .trackers .tacker-num-points .fil-track {
+  display: flex;
+  align-items: center;
+}
+.parainage .blog2 .trackers .tacker-num-points .fil-track .user-point {
+  text-align: center;
+}
+.parainage .blog2 .trackers .tacker-num-points .fil-track .user-point .user-fa {
+  background-color: var(--primary-blue-opacity);
+  color: var(--bg-white);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-xs);
+  font-size: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.parainage .blog2 .trackers .tacker-num-points .fil-track .user-point-__ {
+  padding: var(--spacing-xs);
+  font-size: var(--spacing-md);
+  font-weight: bold;
+}
+.parainage .blog2 .trackers .tacker-num-points .descrip {
+  max-width: 130px;
+  margin-bottom: var(--spacing-xl);
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+}
+/* ________tacker-num-points-percent________ */
+
+.parainage .blog2 .trackers .tacker-num-points-percent {
+  display: flex;
+  flex-direction: column;
+}
+.parainage .blog2 .trackers .tacker-num-points-percent .fil-track {
+  display: flex;
+  align-items: center;
+}
+.parainage .blog2 .trackers .tacker-num-points-percent .fil-track .user-point {
+  text-align: center;
+}
+.parainage
+  .blog2
+  .trackers
+  .tacker-num-points-percent
+  .fil-track
+  .user-point
+  .user-fa {
+  background-color: var(--success-green-opacity);
+  color: var(--bg-white);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-xs);
+  font-size: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.parainage
+  .blog2
+  .trackers
+  .tacker-num-points-percent
+  .fil-track
+  .user-point-__ {
+  padding: var(--spacing-xs);
+  font-size: var(--spacing-md);
+  font-weight: bold;
+}
+.parainage .blog2 .trackers .tacker-num-points-percent .descrip {
+  max-width: 130px;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+/* ________tacker-num-points-pieces__________ */
+.parainage .blog2 .trackers .tacker-num-points-pieces {
+  display: flex;
+  flex-direction: column;
+}
+.parainage .blog2 .trackers .tacker-num-points-pieces .fil-track {
+  display: flex;
+  align-items: center;
+}
+.parainage .blog2 .trackers .tacker-num-points-pieces .fil-track .user-point {
+  text-align: center;
+}
+.parainage
+  .blog2
+  .trackers
+  .tacker-num-points-pieces
+  .fil-track
+  .user-point
+  .user-fa {
+  background-color: var(--text-red);
+  color: var(--bg-white);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-xs);
+  font-size: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.parainage
+  .blog2
+  .trackers
+  .tacker-num-points-pieces
+  .fil-track
+  .user-point-__ {
+  padding: var(--spacing-xs);
+  font-size: var(--spacing-md);
+  font-weight: bold;
+}
+.parainage .blog2 .trackers .tacker-num-points-pieces .descrip {
+  max-width: 130px;
+  margin-bottom: var(--spacing-xl);
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+}
+/* ______________graph_____de_tracker__de_performance_____ */
+.parainage .blog2 .trackers .pf-tooltip {
+  background: #1a202c;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+.parainage .blog2 .trackers .pf-tooltip__label {
+  font-size: 11px;
+  color: var(--text-heading);
+  margin: 0 0 2px;
+}
+.parainage .blog2 .trackers .pf-tooltip__value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+.parainage .blog2 .trackers .pf-tooltip__unit {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-heading);
+}
+
+/* ___________________les parains_du _mois_et_recompence_du_moi________________ */
+.parainage .blog3 {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  border-radius: 8px;
+  min-height: 770px;
+  min-width: 320px;
+  box-shadow: var(--shadow-xl);
+  background-color: var(--bg-white);
+}
+.parainage .blog3 .title-classement {
+  text-transform: capitalize;
+  font-size: var(--spacing-md);
+  margin-left: var(--spacing-sm);
+}
+
+.parainage .blog3 .rec .titleRec {
+  text-transform: capitalize;
+  font-size: var(--spacing-md);
+  margin-left: var(--spacing-sm);
+}
+/* classement */
+.parainage .blog3 .parains {
+  display: flex;
+  flex-direction: column;
+}
+.parainage .blog3 .parains .p {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: var(--spacing-xs);
+}
+.parainage .blog3 .parains .p img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--radius-xy);
+}
+/* recompenses */
+.parainage .blog3 .r {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: var(--spacing-xs);
+}
+
+/* ___________________outils_macketing_et _baniere_telechageable________________ */
+.parainage .blog4 {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  border-radius: 8px;
+  min-height: 350px;
+  box-shadow: var(--shadow-xl);
+  background-color: var(--bg-white);
+  min-width: 950px;
+}
+
+.parainage .blog4 :is(.titleMacketing, .supMacketing) {
+  margin-left: var(--spacing-sm);
+  text-transform: capitalize;
+}
+
+.parainage .blog4 .tools-and-template {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*_____________.banieres_______.blog4 .outils-et-template________________*/
+.parainage .blog4 .tools-and-template .toolsMacketing {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: var(--spacing-sm);
+  gap: 10px;
+}
+/* ___banierer_______ */
+/* ______________1___________ */
+.parainage .blog4 .tools-and-template .toolsMacketing .cart-baniere1 {
+  display: flex;
+  flex-direction: column;
+}
+.parainage .blog4 .tools-and-template .toolsMacketing .cart-baniere {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-blue);
+  margin: var(--spacing-sm);
+  text-align: center;
+  color: var(--bg-white);
+  border-radius: var(--radius-xs);
+}
+.parainage .blog4 .tools-and-template .toolsMacketing .downloar-btn {
+  padding: var(--spacing-xs);
+  border: 0;
+  background-color: var(--primary-blue);
+  color: var(--bg-white);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--shadow-sm);
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-xl);
+  cursor: pointer;
+}
+/* ______________2___________ */
+.parainage .blog4 .tools-and-template .toolsMacketing .cart-baniere2 {
+  display: flex;
+  flex-direction: column;
+}
+.parainage
+  .blog4
+  .tools-and-template
+  .toolsMacketing
+  .cart-baniere2
+  .cart-baniere {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-blue);
+  margin: var(--spacing-sm);
+  text-align: center;
+  color: var(--bg-white);
+  border-radius: var(--radius-xs);
+}
+.parainage .blog4 .tools-and-template .toolsMacketing .downloar-btn {
+  padding: var(--spacing-xs);
+  border: 0;
+  background-color: var(--primary-blue);
+  color: var(--bg-white);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--shadow-sm);
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-xl);
+  cursor: pointer;
+}
+/* ______________3___________ */
+.parainage .blog4 .tools-and-template .toolsMacketing .cart-baniere3 {
+  display: flex;
+  flex-direction: column;
+}
+.parainage
+  .blog4
+  .tools-and-template
+  .toolsMacketing
+  .cart-baniere3
+  .cart-baniere {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-blue);
+  margin: var(--spacing-sm);
+  text-align: center;
+  color: var(--bg-white);
+  border-radius: var(--radius-xs);
+  text-align: center;
+}
+.parainage .blog4 .tools-and-template .toolsMacketing .downloar-btn {
+  padding: var(--spacing-xs);
+  border: 0;
+  background-color: var(--primary-blue);
+  color: var(--bg-white);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--shadow-sm);
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-xl);
+  cursor: pointer;
+}
+/*____tempate_de_message______*/
+
+/* ___1___ */
+.templateMessage .form-tempate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+.templateMessage h3 {
+  text-transform: capitalize;
+}
+
+.templateMessage .form-tempate .selection1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+.templateMessage .form-tempate .selection1 .select1 {
+  width: 250px;
+  border-radius: var(--radius-xs);
+  padding: var(--spacing-xs);
+  text-transform: capitalize;
+}
+.templateMessage .form-tempate .selection1 textarea {
+  width: 250px;
+  border-radius: var(--radius-xs);
+  resize: none;
+}
+/* ___2___ */
+
+.templateMessage .form-tempate .selection2 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+.templateMessage .form-tempate .selection2 .select2 {
+  width: 250px;
+  border-radius: var(--radius-xs);
+  padding: var(--spacing-xs);
+  text-transform: capitalize;
+}
+.templateMessage .form-tempate .selection2 textarea {
+  width: 250px;
+  border-radius: var(--radius-xs);
+  resize: none;
+}
+
+.templateMessage .useTemp {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.templateMessage .useTemp button {
+  padding: var(--spacing-sm);
+  width: 350px;
+  border: 0;
+  background-color: var(--primary-blue);
+  color: var(--bg-white);
+  text-transform: capitalize;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+}
+
+/* __________________________________
+   RESPONSIVITÉ 
+   __________________________________ */
+
+/* ── Tablette (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .parainage .blogs {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    margin-right: var(--spacing-sm);
+  }
+  .parainage .blog1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    min-width: unset;
+  }
+  .parainage .blog2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .parainage .blog3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    min-height: unset;
+    min-width: unset;
+  }
+  .parainage .blog4 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    min-width: unset;
+  }
+  .parainage .blog4 .tools-and-template {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-sm);
+  }
+  .templateMessage .useTemp button {
+    width: 100%;
+  }
+}
+
+/* ── Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  .parainage .title-par {
+    margin-left: var(--spacing-sm);
+    font-size: 1rem;
+    text-align: center;
+  }
+  .parainage .blogs {
+    grid-template-columns: 1fr;
+    margin-right: var(--spacing-xs);
+    margin-left: var(--spacing-xs);
+  }
+  .parainage .blog1,
+  .parainage .blog2,
+  .parainage .blog3,
+  .parainage .blog4 {
+    grid-column: 1 / 2 !important;
+    grid-row: auto !important;
+    min-width: unset;
+    min-height: unset;
+    width: 100%;
+  }
+  /* blog1 : share en colonne */
+  .parainage .blog1 .share {
+    grid-template-columns: 1fr;
+  }
+  .parainage .blog1 .share .sharQR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--spacing-sm);
+  }
+  .parainage .blog1 .inputAnetwork .inputReadonly {
+    max-width: 100%;
+  }
+  .parainage .blog1 .share .sharnet .socialShare {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  /* blog2 : trackers en colonne */
+  .parainage .blog2 .trackers {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0;
+  }
+  .parainage .blog2 .trackers .tacker-num-points,
+  .parainage .blog2 .trackers .tacker-num-points-percent,
+  .parainage .blog2 .trackers .tacker-num-points-pieces {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0 var(--spacing-sm);
+  }
+  .parainage .blog2 .trackers .tacker-num-points .descrip,
+  .parainage .blog2 .trackers .tacker-num-points-percent .descrip,
+  .parainage .blog2 .trackers .tacker-num-points-pieces .descrip {
+    max-width: unset;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  /* blog4 : outils en colonne */
+  .parainage .blog4 .tools-and-template {
+    flex-direction: column;
+    padding: var(--spacing-xs);
+    gap: 12px;
+  }
+  .parainage .blog4 .tools-and-template .toolsMacketing {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .templateMessage .form-tempate {
+    flex-direction: column;
+    align-items: stretch;
+  }   
+  .templateMessage .form-tempate .selection1 .select1,
+  .templateMessage .form-tempate .selection1 textarea {
+    width: 100%;
+  }
+  .templateMessage .useTemp button {
+    width: 100%;
+  }
+}
+
+/* ── Petit mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .parainage
+    .blog2
+    .trackers
+    .tacker-num-points
+    .fil-track
+    .user-point
+    .user-fa,
+  .parainage
+    .blog2
+    .trackers
+    .tacker-num-points-percent
+    .fil-track
+    .user-point
+    .user-fa,
+  .parainage
+    .blog2
+    .trackers
+    .tacker-num-points-pieces
+    .fil-track
+    .user-point
+    .user-fa {
+    font-size: 28px;
+  }
+  .parainage .blog3 .parains .p img {
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -24,8 +24,10 @@ body {
 :root {
   /* Colors */
   --primary-blue: #0066cc;
+  --primary-blue-opacity: #0080ffd5;
   --primary-blue-dark: #004c99;
   --success-green: #00b894;
+  --success-green-opacity: #00b893ad;
   --success-green-light: #55efc4;
 
   --text-primary: #111111;
@@ -33,11 +35,29 @@ body {
   --text-secondary: #5a6c7d;
   --text-muted: #7f8c8d;
   --text-light: #95a5a6;
+  --text-gray: #dadedf;
+  --text-red:#ff6262;
 
   --bg-white: #ffffff;
   --bg-dark:#000115;
   --btn-dark: #2c3e50;
   --btn-dark-hover: #1a252f;
+
+
+  /* ________________theme de couleur pour dashboard_____________*/
+
+    --db-blue: #1a56db;
+  --db-green: #057a55;
+  --db-or: #f97316;
+  --db-red: #c81e1e;
+  --db-orange: #f97316;
+  --db-sidebar: #0066cc;
+  --db-bg: #f1f5f9;
+  --db-white: #ffffff;
+  --db-border: #e2e8f0;
+  --db-text: #1e293b;
+  --db-muted: #64748b;
+  --db-shadow: 0 2px 16px rgba(15, 23, 42, 0.08);
 
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -69,6 +89,32 @@ body {
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
+
+/* LAOUTS */
+body.hide-header header {
+  display: none;
+}
+
+/* variable pour gestion fnanciere et autre */
+.gf-page {
+  --gf-blue:    #1a56db;
+  --gf-green:   #057a55;
+  --gf-orange:  #c27803;
+  --gf-red:     #c81e1e;
+  --gf-bg:      #f4f6fb;
+  --gf-white:   #ffffff;
+  --gf-border:  #e2e8f0;
+  --gf-text:    #1e293b;
+  --gf-muted:   #64748b;
+  --gf-shadow:  0 2px 16px rgba(30,41,59,0.08);
+
+  font-family: 'arial', sans-serif;
+  background: var(--gf-bg);
+  min-height: 100vh;
+  padding: 28px 32px;
+  color: var(--gf-text);
+}
+
 
 /* UTILITY CLASSES */
 .container {

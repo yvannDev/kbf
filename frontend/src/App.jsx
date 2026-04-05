@@ -9,9 +9,13 @@ import Login from "./components/Auth/Login/Login";
 import { AuthProvider } from "./components/context/AuthContext";
 import SendEmail from "./components/Auth/sendEmail/SendEmail";
 import ConfirmMdp from "./components/Auth/confirmMdp/ConfirmMdp";
-import Otp from "./components/Auth/Otp/Otp";
+import Otp from"./components/Auth/Otp/Otp";
+import Parainage from "./components/Parainage/Parainage"
 import ProtectedRoute from "./components/Protected/ProtectedRoute";
-
+import Gestion from "./components/Gestion/Gestion";
+import Payment from "./components/Payment/Payment";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Retrait from "./components/Retrait/Retrait";
 const App = () => {
   return (
     <>
@@ -28,7 +32,26 @@ const App = () => {
               }
             ></Route>
                 
+             <Route path="/parainage" element={
+              <Parainage/>
 
+              } ></Route>
+             <Route path="/gestion" element={
+              <Gestion/>
+              } ></Route>
+             <Route path="/payment" element={
+              <Payment/>
+              } ></Route>
+           
+              <Route path="/dashboard" element={
+             <Dashboard/>
+              } ></Route>
+
+            <Route path="/retrait" element={
+              // <ProtectedRoute>
+                <Retrait />
+              // </ProtectedRoute>
+            }></Route>
             {/* les route non proteger */}
             <Route path="/register" element={<Register />}></Route>
             <Route path="/login" element={<Login />}></Route>
@@ -39,13 +62,13 @@ const App = () => {
 
 
                   {/* Redirection par défaut */}
-            <Route path="/" element={<Navigate to="/login" replace />} />
+            {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
 
             {/* Page 404 */}
-            <Route path="*" element={<Navigate to="/login" replace />} />
+            {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
           </Routes>
         </AuthProvider>
-      </BrowserRouter>
+      </BrowserRouter>  
     </>
   );
 };

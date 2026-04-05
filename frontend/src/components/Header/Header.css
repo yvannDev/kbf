@@ -6,7 +6,7 @@ header {
   top: 0;
   z-index: 1000;
   background: var(--bg-white);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ===================== NAV BAR ===================== */

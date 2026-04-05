@@ -1,0 +1,217 @@
+/* ── Breadcrumb ── */
+.paiement-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.bc-sep {
+  color: var(--text-muted);
+}
+.bc-actif {
+  color: var(--bg-dark);
+  font-weight: 600;
+}
+
+/* ── Résumé service ── */
+.paiement-resume {
+  background: var(--bg-white);
+  border: 1px solid var(--bg-light);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--text-heading);
+  line-height: 1.8;
+}
+.paiement-montant {
+  font-size: 18px;
+  color: var(--text-primary);
+}
+.paiement-frais {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── Étape label ── */
+.paiement-etape {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0a0a0a;
+  margin-bottom: 12px;
+}
+
+/* ── Boutons opérateurs ── */
+.paiement-operateurs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.paiement-op-btn {
+  flex: 1;
+  min-width: 100px;
+  padding: 14px 10px;
+  border: 2px solid var(--primary-blue);
+  border-radius: 10px;
+  background: var(--bg-white);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.paiement-op-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.paiement-op-btn--actif {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+.paiement-op-label {
+  font-weight: 700;
+  font-size: 14px;
+}
+.paiement-op-detecte {
+  font-size: 11px;
+  color: #057a55;
+  font-weight: 600;
+}
+
+/* ── Champ téléphone ── */
+.paiement-tel-wrap {
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid #ddd;
+  transition: border-color 0.25s;
+}
+.paiement-tel-wrap:focus-within {
+  border-bottom-color: var(--primary-blue, #c9a96e);
+}
+
+/* ✅ Sélecteur indicatif dynamique — remplace le span fixe +228 */
+.paiement-indicatif-select {
+  border: none;
+  border-right: 1px solid #eee;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0a0a0a;
+  padding: 12px 8px 12px 14px;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  font-family: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  min-width: 85px;
+}
+.paiement-indicatif-select:focus {
+  outline: none;
+}
+
+.paiement-tel-input {
+  border: none !important;
+  border-bottom: none !important;
+  flex: 1;
+  padding: 12px 8px !important;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+.paiement-hint {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 4px;
+  display: block;
+}
+.paiement-detecte-msg {
+  font-size: 12px;
+  color: var(--success-green, #057a55);
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── Bouton payer ── */
+.paiement-btn-payer {
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+/* ── Info validation ── */
+.paiement-info-validation {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* ── Webhook ── */
+.paiement-webhook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f0fdf4;
+  border: 1px solid var(--success, #057a55);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--success, #057a55);
+  font-weight: 500;
+}
+.paiement-webhook__icon {
+  color: var(--success, #057a55);
+  font-size: 15px;
+}
+
+/* ── Panneau gauche répartition ── */
+.side-repartition {
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.side-rep__titre {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.side-rep__ligne {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 6px;
+}
+.side-rep__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;   
+}
+.dot--orange {
+  background: #f97316;
+}
+.dot--blue {
+  background: #60a5fa;
+}
+.dot--green {
+  background: #34d399;
+}
+.dot--red {
+  background: #ef4444;
+}

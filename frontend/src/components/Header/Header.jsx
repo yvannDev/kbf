@@ -11,12 +11,12 @@ import { motion, AnimatePresence } from "framer-motion";
 // Liste des liens de navigation (évite la duplication)
 const navItems = [
   { to: "/Dashboard", icon: <MdDashboard />, label: "Dashboard" },
-  { to: "/parrainage", icon: <FaUserFriends />, label: "parrainage" },
-  { to: "/GestionFinancière", icon: <FaMoneyBillWave />, label: "Gestion Financière" },
-  { to: "/Paiement", icon: <FaCreditCard />, label: "Paiement"},
-  { to: "/Retraits", icon: <FaUniregistry />, label: "Retraits"},
-  { to: "/register", icon: <BiLogOut />, label: "register" },
-  { to: "/Administrateur", icon: <FaUserCog />, label: "admin"},
+  { to: "/parainage", icon: <FaUserFriends />, label: "parainage" },
+    { to: "/Payment", icon: <FaCreditCard />, label: "Payment"},
+      { to: "/Retrait", icon: <FaUniregistry />, label: "Retrait"},
+  { to: "/Gestion", icon: <FaMoneyBillWave />, label: "GestionFinancière" },
+  // { to: "/register", icon: <BiLogOut />, label: "register" },
+  // { to: "/Administrateur", icon: <FaUserCog />, label: "admin"},
 ];
 
 const Header = () => {
